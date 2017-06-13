@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="860265f1-73df-47d9-b5dc-c9cdc6b1489a" version="1">
+  <Properties>
+    <Name>Moar Units Core Only (No Unique Units)</Name>
+    <Description>Moar Units Core Only (No Unique Units)
+
+This means only the units marked with an * are added:
+
+Scout -&gt; Explorer* -&gt; Ranger -&gt; Sniper*
+
+Rider (renamed Horseman) -&gt; Horseman* -&gt; Cavalry
+
+Swordsman -&gt; Longswordsman* -&gt; Musketman -&gt; Rifleman* -&gt; Infantry
+
+Knight -&gt; Cuirassier* -&gt; Tank
+
+Moar Units is required. 
+
+Obviously disable any Even Moar Units! modules if you don't want any unique units.</Description>
+    <Teaser>Moar Units Core Only (No Unique Units)</Teaser>
+    <Authors>Deliverator</Authors>
+  </Properties>
+  <Dependencies>
+    <Mod id="8342b98d-80c7-4002-87bb-419646bd9b54" title="MOARUnits" />
+  </Dependencies>
+  <FrontEndActions>
+    <UpdateDatabase id="UpdateConfigDatabase">
+      <File>DeleteUniqueUnitsConfig.sql</File>
+    </UpdateDatabase>
+  </FrontEndActions>
+  <InGameActions>
+    <UpdateDatabase id="UpdateGameDatabase">
+      <File>DeleteUniqueUnits.sql</File>
+    </UpdateDatabase>
+  </InGameActions>
+  <Files>
+    <File>DeleteUniqueUnits.sql</File>
+    <File>DeleteUniqueUnitsConfig.sql</File>
+  </Files>
+</Mod>
